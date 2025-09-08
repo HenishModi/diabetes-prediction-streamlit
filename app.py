@@ -5,7 +5,8 @@ import numpy as np
 import pickle
 
 # load the model
-model = pickle.load(open('model_diab_rfc.pkl', 'rb'))
+with open("model_diab_rfc.pkl", "rb") as f:
+    model = pickle.load(f)
 
 l=['Pregnancies','Glucose','BloodPressure','SkinThickness','Insulin','BMI','DiabetesPedigreeFunction','Age']
 
